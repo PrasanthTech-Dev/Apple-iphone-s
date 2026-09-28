@@ -54,11 +54,10 @@ export default function BuyModal({ isOpen, onClose, productName = 'iPhone 14' })
                 <button
                   key={s.size}
                   onClick={() => setSelectedStorage(s.size)}
-                  className={`p-3 rounded-2xl border text-left flex justify-between items-center transition-all ${
-                    selectedStorage === s.size
+                  className={`p-3 rounded-2xl border text-left flex justify-between items-center transition-all ${selectedStorage === s.size
                       ? 'border-[#0071e3] ring-2 ring-[#0071e3]/30 bg-[#0071e3]/5 font-semibold'
                       : 'border-[#d2d2d7] hover:border-black/30'
-                  }`}
+                    }`}
                 >
                   <span className="text-[14px]">{s.size}</span>
                   <span className="text-[12px] text-[#86868b]">
@@ -77,11 +76,10 @@ export default function BuyModal({ isOpen, onClose, productName = 'iPhone 14' })
             </div>
             <button
               onClick={() => setTradeIn(!tradeIn)}
-              className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${
-                tradeIn
+              className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${tradeIn
                   ? 'bg-[#0071e3] text-white'
                   : 'bg-white border border-[#d2d2d7] text-[#1d1d1f] hover:bg-gray-50'
-              }`}
+                }`}
             >
               {tradeIn ? 'Applied -$200' : 'Add Trade In'}
             </button>
@@ -108,9 +106,8 @@ export default function BuyModal({ isOpen, onClose, productName = 'iPhone 14' })
             <button
               onClick={handleAddToBag}
               disabled={added}
-              className={`apple-btn-primary px-6 py-3 text-[15px] font-medium shadow-md transition-all ${
-                added ? 'bg-emerald-600' : 'hover:scale-105 active:scale-95'
-              }`}
+              className={`apple-btn-primary px-6 py-3 text-[15px] font-medium shadow-md transition-all ${added ? 'bg-emerald-600' : 'hover:scale-105 active:scale-95'
+                }`}
             >
               {added ? (
                 <span className="flex items-center space-x-1.5">

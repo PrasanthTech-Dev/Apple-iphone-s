@@ -25,7 +25,7 @@ export default function App() {
       {/* 3. Trade-in Promo Ribbon */}
       <TradeInRibbon />
 
-      {/* Main Content Sections matching Figma top-to-bottom */}
+      {/* Main Content Sections matching Figma top-to-bottom with smooth reveal animations */}
       <main>
         {/* 4. iPhone 14 White Hero */}
         <HeroIphone14 />

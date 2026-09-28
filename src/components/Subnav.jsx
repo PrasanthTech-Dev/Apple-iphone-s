@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import icon14Pro from '../assets/iphone_14_pro_light__dfhcc00ur2oi_large.svg.png';
 import icon14 from '../assets/iphone_14_light__fwknsxkf80uq_large.svg.png';
 import icon13 from '../assets/iphone_13_light__ewo3e0sf67o2_large.svg.png';
@@ -11,6 +11,7 @@ import iconAcc from '../assets/accessories_light__ed5l6ipsevqu_large.svg.png';
 import iconCard from '../assets/iphone_apple_card_light__dtut839e76c2_large.svg.png';
 import iconIos16 from '../assets/iphone_ios_light__b8s4ws8o77iq_large.svg.png';
 import iconShop from '../assets/shop_iphone_light__b2toggskllle_large.svg.png';
+import { motion } from 'framer-motion';
 
 const subnavItems = [
   { name: 'iPhone 14 Pro', icon: icon14Pro, href: '#iphone-14-pro', isNew: true },
@@ -29,7 +30,7 @@ const subnavItems = [
 
 export default function Subnav() {
   return (
-    <div className="bg-[#fbfbfd] border-b border-[#d2d2d7]/30 py-3 px-4 overflow-x-auto scrollbar-none sticky top-[44px] z-40">
+    <div className="bg-[#fbfbfd] border-b border-[#d2d2d7]/30 py-3 px-4 overflow-x-auto sticky top-[44px] z-40">
       <div className="max-w-[1024px] mx-auto flex items-end justify-between min-w-max space-x-6 md:space-x-8 text-center">
         {subnavItems.map((item, idx) => (
           <a
@@ -39,10 +40,12 @@ export default function Subnav() {
             title={item.name}
           >
             <div className="h-[42px] flex items-center justify-center mb-1">
-              <img
+              <motion.img
+                whileHover={{ scale: 1.1, y: -2 }}
+                transition={{ duration: 0.2 }}
                 src={item.icon}
                 alt={item.name}
-                className="h-[38px] md:h-[40px] lg:h-[42px] w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-[38px] md:h-[40px] lg:h-[42px] w-auto object-contain transition-transform duration-200"
               />
             </div>
             <span className="text-[12px] font-normal text-[#1d1d1f] tracking-tight whitespace-nowrap group-hover:text-[#0066cc]">
